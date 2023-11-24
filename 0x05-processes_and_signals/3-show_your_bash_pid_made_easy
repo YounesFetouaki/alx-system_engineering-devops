@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Processes contain bash
-pgrep -l bash
