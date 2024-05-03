@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Bash script to display information about subdomains
+
+dns_config () {
+    local script
+    script=$(dig +short "$2.$1")
+    if [ -n "$script" ]; then
+        echo "The subdomain $2 is a A record and points to $script"
+    else
+        echo "No DNS record found for $2.$1"
+    fi
+}
+
+if [ "$#" == 1 ]; then
+  dns_config "$1" "www"
+  dns_config "$1" "lb-01"
+  dns_config "$1" "web-01"
+  dns_config "$1" "web-02"
+elif [ "$#" == 2 ]; then
+  dns_config "$1" "$2"
+fi
