@@ -18,7 +18,7 @@ file {'/var/www/html/index.html':
 
 # Redirect to my linkedin profile
 exec {'redirect_me':
-	command => 'sed -i "24i\	rewrite ^/redirect_me https://linkedin.com/in/achrafelkhnissi permanent;" /etc/nginx/sites-available/default',
+	command => 'sed -i "24i\	rewrite ^/redirect_me https://linkedin.com/in/younes-fetouaki permanent;" /etc/nginx/sites-available/default',
 	provider => 'shell'
 }
 
