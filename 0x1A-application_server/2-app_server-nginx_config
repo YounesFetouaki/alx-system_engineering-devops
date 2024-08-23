@@ -13,7 +13,7 @@ server {
    }
 
     # Use IP of server as domain name
-    server_name 52.91.147.26;
+    server_name 100.26.56.239;
 
     # Customize HTTP response header
     add_header  X-Served-By 369708-web-01;
